@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/colorLightGrey"
+    tools:context="com.example.yanvydra.cood.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/coodlogo"/>
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/capsule_text"
+            android:gravity="center"
+            android:text="UserName"
+            android:textColor="@color/colorDarkGrey" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/capsule_text"
+            android:layout_marginTop="14dp"
+            android:text="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/colorDarkGrey"
+            android:gravity="center">
+        </EditText>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:background="@drawable/capsule_button"
+        android:text="Sign up"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="64dp"
+        android:fontFamily="casual"
+        android:textSize="18sp"/>
+
+</LinearLayout>

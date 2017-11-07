@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
             }
         },SPLASH_TIME_OUT);
     }
