@@ -8,16 +8,19 @@
     android:background="@color/colorLightGrey"
     tools:context="com.example.yanvydra.cood.LoginActivity">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/logoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_gravity="center"
+        android:src="@drawable/coodlogo"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/coodlogo"/>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/etUserName"
@@ -42,15 +45,32 @@
         </EditText>
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llSignReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <Button
-        android:layout_width="280dp"
-        android:layout_height="56dp"
-        android:background="@drawable/capsule_button"
-        android:text="Sign up"
-        android:textColor="@color/colorWhite"
-        android:layout_marginTop="64dp"
-        android:fontFamily="casual"
-        android:textSize="18sp"/>
+        <Button
+            android:id="@+id/btSignup"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:background="@drawable/capsule_button"
+            android:onClick="onSignUpClick"
+            android:text="Sign up"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="48dp"
+            android:fontFamily="casual"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_marginTop="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Here"
+            android:textSize="14sp"/>
+    </LinearLayout>
 
 </LinearLayout>

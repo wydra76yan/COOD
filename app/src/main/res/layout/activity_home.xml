@@ -4,30 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorLightGrey"
-    android:gravity="center"
+    android:gravity="top"
     tools:context="com.example.yanvydra.cood.HomeActivity">
 
     <LinearLayout
+        android:id="@+id/llTopToolBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/hp_topbar">
         <ImageView
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/coodlogo"/>
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/colorDarkGrey">
+            android:src="@drawable/logoforhp"/>
 
-        </View>
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/colorForShadow">
-
-        </View>
     </LinearLayout>
 
 
