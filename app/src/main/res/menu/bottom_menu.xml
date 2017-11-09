@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/smthone"
-        android:icon="@drawable/ic_action_chat"
+        android:icon="@drawable/ic_chat_24dp"
         android:title="Chat">
 
     </item>
 
     <item
         android:id="@+id/smthtwo"
-        android:icon="@drawable/ic_action_chat"
-        android:title="smth1">
+        android:icon="@drawable/ic_friends_24dp"
+        android:title="Friends">
 
     </item>
 
     <item
         android:id="@+id/smththree"
-        android:icon="@mipmap/ic_launcher"
-        android:title="smth2">
+        android:icon="@drawable/ic_mypage_24dp"
+        android:title="My Page">
 
     </item>
 
