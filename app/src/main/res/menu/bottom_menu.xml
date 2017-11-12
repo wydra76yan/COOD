@@ -15,7 +15,7 @@
     </item>
 
     <item
-        android:id="@+id/smththree"
+        android:id="@+id/myPage"
         android:icon="@drawable/ic_mypage_24dp"
         android:title="My Page">
 

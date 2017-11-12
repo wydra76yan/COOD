@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView imageView = (ImageView) findViewById(R.id.logo);
-        Animation appearance = AnimationUtils.loadAnimation(this,R.anim.logo_appearance);
+        Animation appearance = AnimationUtils.loadAnimation( this,R.anim.logo_appearance);
         imageView.setAnimation(appearance);
 
 
