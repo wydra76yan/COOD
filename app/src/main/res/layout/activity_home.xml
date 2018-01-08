@@ -9,46 +9,82 @@
     android:background="@color/colorLightGrey"
     tools:context="com.example.yanvydra.cood.HomeActivity">
 
-    <FrameLayout
-        android:layout_below="@id/llTopToolBar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/for_fragments">
-
-    </FrameLayout>
-
     <LinearLayout
-        android:id="@+id/llTopToolBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/hp_topbar">
+        android:layout_height="56dp"
+        android:elevation="10dp"
+        android:background="@color/colorWhite"
+        android:id="@+id/bottonNavBar"
+        android:paddingTop="5dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:foregroundGravity="bottom">
 
-        <ImageView
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/logoforhp"/>
 
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/hp_botbar"
+            android:baselineAligned="false">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:text="Matching"
+                android:layout_weight="1"
+                android:button="@null"
+                android:padding="2dp"
+                android:checked="false"
+                android:textSize="12sp"
+                android:drawableTop="@drawable/ic_mypage_24dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/matching"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:checked="false"
+                android:textSize="12sp"
+                android:drawableTop="@drawable/ic_mypage_24dp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/watchList"
+                android:text="Watchlist"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:id="@+id/rates"
+                android:button="@null"
+                android:paddingTop="5dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:textSize="12sp"
+                android:drawableTop="@drawable/ic_mypage_24dp"
+                android:textColor="@color/colorWhite"
+                android:text="Rates"/>
+
+        </RadioGroup>
     </LinearLayout>
 
-
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/botNav"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="600dp"
-        android:gravity="bottom"
-        android:background="@drawable/hp_botbar"
-        design:menu="@menu/bottom_menu"
-        app:itemIconTint="@color/colorWhite"
-        app:itemTextColor="@color/colorWhite"
-        >
-
-    </android.support.design.widget.BottomNavigationView>
-
-
-
-
+        android:layout_height="match_parent"
+        android:id="@+id/dynamicContent"
+        android:orientation="vertical"
+        android:layout_marginBottom="56dp"
+        android:background="@color/colorWhite"
+        android:layout_gravity="bottom">
+    </LinearLayout>
 </RelativeLayout>

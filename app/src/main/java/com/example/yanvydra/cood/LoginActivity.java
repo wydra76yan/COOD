@@ -93,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                                     else if(obj.getJSONObject(user).getString("password").equals(pass)){
                                         UserDetails.username = user;
                                         UserDetails.password = pass;
-                                        startActivity(new Intent(LoginActivity.this, Users.class));
+                                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                                     }
                                     else {
                                         Toast.makeText(LoginActivity.this, "incorrect password", Toast.LENGTH_LONG).show();

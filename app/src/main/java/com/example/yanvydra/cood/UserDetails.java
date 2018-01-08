@@ -2,7 +2,7 @@ package com.example.yanvydra.cood;
 
 
 public class UserDetails {
-    static String username = "";
+    public static String username = "";
     static String password = "";
     static String chatWith = "";
     static String friendWith = "";
