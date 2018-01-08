@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "985834401519",
+    "firebase_url": "https://fir-excood2.firebaseio.com",
+    "project_id": "fir-excood2",
+    "storage_bucket": "fir-excood2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985834401519:android:77c1548829e1a8e5",
+        "android_client_info": {
+          "package_name": "com.example.yanvydra.cood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985834401519-1r75f0ra7inuque4bc1fg5d6trniub68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYbaV_MguQbBjYV8covTRCml4tJMlJPOc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

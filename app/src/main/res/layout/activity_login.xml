@@ -29,7 +29,7 @@
             android:layout_marginTop="36dp"
             android:background="@drawable/capsule_text"
             android:gravity="center"
-            android:text="UserName"
+            android:hint="UserName"
             android:textColor="@color/colorDarkGrey" />
 
         <EditText
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/capsule_text"
             android:layout_marginTop="14dp"
-            android:text="Password"
+            android:hint="Password"
             android:inputType="textPassword"
             android:textColor="@color/colorDarkGrey"
             android:gravity="center">
@@ -53,11 +53,10 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/btSignup"
+            android:id="@+id/loginButton"
             android:layout_width="280dp"
             android:layout_height="56dp"
             android:background="@drawable/capsule_button"
-            android:onClick="onSignUpClick"
             android:text="Sign up"
             android:textColor="@color/colorWhite"
             android:layout_marginTop="48dp"
@@ -65,7 +64,7 @@
             android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/tvRegister"
+            android:id="@+id/register"
             android:layout_marginTop="14dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

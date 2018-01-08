@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="294dp"
+        android:orientation="vertical"
+        android:background="@drawable/hp_topbar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="16dp"
+            android:id="@+id/profile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="126dp"
+            android:src="@drawable/mainphoto"
+            app:civ_border_width="10dp"
+            app:civ_border_color="@color/colorDarkGreen"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:text="Vydra Yan"/>
+
+        <Button
+            android:layout_marginTop="28dp"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:text="Account settings"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:fontFamily="casual"
+            android:background="@drawable/hp_topbar"
+            android:backgroundTint="@color/colorDarkGreen"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:fontFamily="casual"
+        android:text="+35589247491"
+        android:gravity="center"
+        android:background="@drawable/capsule_text"/>
+    <TextView
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:text="yakoi@gmail.com"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:fontFamily="casual"
+        android:background="@drawable/capsule_text"/>
+
+</LinearLayout>
