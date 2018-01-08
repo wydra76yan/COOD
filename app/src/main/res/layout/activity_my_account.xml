@@ -12,42 +12,63 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_marginTop="16dp"
+            android:layout_gravity="center"
             android:id="@+id/profile_image"
             android:layout_width="wrap_content"
-            android:layout_height="126dp"
+            android:layout_height="136dp"
             android:src="@drawable/mainphoto"
-            app:civ_border_width="10dp"
+            app:civ_border_width="5dp"
             app:civ_border_color="@color/colorDarkGreen"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:id="@+id/profile_name"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
             android:fontFamily="casual"
             android:textColor="@color/colorWhite"
             android:textSize="18sp"
             android:text="empty"/>
-
-        <Button
-            android:layout_marginTop="28dp"
-            android:layout_width="match_parent"
-            android:layout_height="96dp"
-            android:text="Account settings"
-            android:textColor="@color/colorWhite"
-            android:textSize="20sp"
-            android:fontFamily="casual"
-            android:background="@drawable/hp_topbar"
-            android:backgroundTint="@color/colorDarkGreen"/>
-
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/account_btn"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Account settings"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="casual"
+                android:background="@drawable/hp_topbar"
+                android:backgroundTint="@color/colorDarkGreen"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"/>
+            <Button
+                android:id="@+id/image_btn"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:text="Change Image"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:fontFamily="casual"
+                android:background="@drawable/hp_topbar"
+                android:backgroundTint="@color/colorDarkGreen"/>
+        </LinearLayout>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/password"
         android:layout_marginTop="34dp"
         android:layout_width="match_parent"
         android:layout_height="78dp"
         android:textColor="@color/colorWhite"
+        android:id="@+id/password"
         android:textSize="20sp"
         android:fontFamily="casual"
         android:text="+35589247491"

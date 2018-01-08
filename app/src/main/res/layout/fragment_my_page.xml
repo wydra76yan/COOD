@@ -33,7 +33,9 @@
             android:orientation="horizontal"
             android:layout_height="wrap_content">
             <Button
+                android:id="@+id/account_btn"
                 android:layout_marginTop="28dp"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="96dp"
                 android:text="Account settings"
@@ -42,11 +44,16 @@
                 android:fontFamily="casual"
                 android:background="@drawable/hp_topbar"
                 android:backgroundTint="@color/colorDarkGreen"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"/>
             <Button
+                android:id="@+id/image_btn"
                 android:layout_marginTop="28dp"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="96dp"
-                android:text="Account settings"
+                android:text="Change Image"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp"
                 android:fontFamily="casual"

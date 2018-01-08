@@ -42,7 +42,7 @@ public class MyAccount extends AppCompatActivity {
     Button mImageBtn;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_account);
 
@@ -50,8 +50,8 @@ public class MyAccount extends AppCompatActivity {
         mName = (TextView) findViewById(R.id.profile_name);
         avaImage = (ImageView) findViewById(R.id.profile_image);
 
-        mStatusBtn = (Button) findViewById(R.id.settings_status_btn);
-        mImageBtn = (Button) findViewById(R.id.settings_image_btn);
+        mStatusBtn = (Button) findViewById(R.id.account_btn);
+        mImageBtn = (Button) findViewById(R.id.image_btn);
 
         FirebaseApp.initializeApp(this);
         Firebase.setAndroidContext(this);
@@ -87,9 +87,11 @@ public class MyAccount extends AppCompatActivity {
             public void onClick(View view) {
 
                 String password_value = mPassword.getText().toString();
+                String name_value = mName.getText().toString();
 
-                Intent status_intent = new Intent(MyAccount.this, SettingsChange.class);
+                Intent status_intent = new Intent(MyAccount.this, AccountSettings.class);
                 status_intent.putExtra("password_value", password_value);
+                status_intent.putExtra("name_value", name_value);
                 startActivity(status_intent);
             }
         });

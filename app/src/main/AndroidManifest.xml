@@ -21,7 +21,8 @@
         <activity android:name=".Register" />
         <activity android:name=".Users" />
         <activity android:name=".MyAccount" />
-        <activity android:name=".Friends"></activity>
+        <activity android:name=".Friends" />
+        <activity android:name=".AccountSettings"></activity>
     </application>
 
 </manifest>
