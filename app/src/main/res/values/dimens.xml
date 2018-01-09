@@ -3,4 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="activity_horizontal_margin2">64dp</dimen>
+    <dimen name="radio_but_spaces">164dp</dimen>
 </resources>

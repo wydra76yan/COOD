@@ -22,7 +22,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
-import com.theartofdev.edmodo.cropper.CropImage;
 
 public class MyAccount extends AppCompatActivity {
 
@@ -116,23 +115,27 @@ public class MyAccount extends AppCompatActivity {
 
             Uri imageUri=data.getData();
 
-            CropImage.activity(imageUri)
-                    .setAspectRatio(1,1)
-                    .setMinCropWindowSize(700,700)
-                    .start(this);
-        }
+//            CropImage.activity(imageUri)
+//                    .setAspectRatio(1,1)
+//                    .setMinCropWindowSize(700,700)
+//                    .start(this);
 
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+
+
+
+
+      /*  if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
-            if (resultCode == RESULT_OK) {
+            if (resultCode == RESULT_OK) {*/
+            //String result = imageUri;
 
-                Uri resultUri = result.getUri();
-                StorageReference filePath = mImageStorage.child("profile_images").child(UserDetails.username+".jpg");
+                //Uri  = data.getUri();
+                StorageReference filePath = mImageStorage.child("profile_images").child(UserDetails.username + ".jpg");
 
-                filePath.putFile(resultUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                filePath.putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             //Toast.makeText(AccountSettings.this,"worki", Toast.LENGTH_LONG).show();
                             String download_url = task.getResult().getDownloadUrl().toString();//"https://firebasestorage.googleapis.com/v0/b/fir-excood2.appspot.com/o/profile_images%2Ftest04.jpg?alt=media&token=1118ff23-8727-4b80-8b44-48f164e35da5";
                             reference6.setValue(download_url);
@@ -141,16 +144,29 @@ public class MyAccount extends AppCompatActivity {
                             //startActivity(status_intent);
 
 
-
-                        }else {
-                            Toast.makeText(MyAccount.this,"errrr", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(MyAccount.this, "errrr", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
 
-            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
-                Exception error = result.getError();
+            } else if (resultCode == RESULT_OK) {
+                //Exception error = result.getError();
             }
         }
-    }
+    /*public String getRealPathFromURI(Uri contentUri) {
+
+        String [] proj={MediaStore.Images.Media.DATA};
+        Cursor cursor = managedQuery( contentUri, proj, // Which columns to return
+                null,       // WHERE clause; which rows to return (all rows)
+                null,       // WHERE clause selection arguments (none)
+                null); // Order-by clause (ascending by name)
+        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+        cursor.moveToFirst();
+
+
+
+        return cursor.getString(column_index);
+    }*/
 }
+
