@@ -20,19 +20,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:id="@+id/usersList"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/butForMyPage"
-        android:text="My Page"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/butForListOfFriends"
-        android:text="My Friends"
-        />
+
 
 </LinearLayout>

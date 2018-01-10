@@ -11,15 +11,15 @@
         android:background="@drawable/hp_topbar">
 
         <ImageView
-            android:layout_gravity="center"
             android:id="@+id/profile_image"
+            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="276dp"
             android:src="@drawable/mainphoto" />
         <TextView
+            android:id="@+id/profile_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/profile_name"
             android:gravity="center"
             android:fontFamily="casual"
             android:textColor="@color/colorWhite"

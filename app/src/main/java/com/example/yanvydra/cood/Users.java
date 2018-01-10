@@ -1,6 +1,7 @@
 package com.example.yanvydra.cood;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -39,8 +40,6 @@ public class Users extends AppCompatActivity {
 
         // FirebaseApp.initializeApp(this);
 
-        butForMyPage = (Button)findViewById(R.id.butForMyPage);
-        butForListOfFriends = (Button)findViewById(R.id.butForListOfFriends);
         usersList = (ListView)findViewById(R.id.usersList);
         noUsersText = (TextView)findViewById(R.id.noUsersText);
 
@@ -70,29 +69,12 @@ public class Users extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 UserDetails.chatWith = al.get(position);
                 UserDetails.friendWith = al.get(position);
-               // startActivity(new Intent(Users.this, UsersAccount.class));
+                startActivity(new Intent(Users.this, UsersAccount.class));
             }
         });
 
-        butForMyPage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-             //   Intent status_intent = new Intent(Users.this, AccountSettings.class);
-            //    startActivity(status_intent);
 
-            }
-        });
-
-        butForListOfFriends.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-              //  Intent status_intent = new Intent(Users.this, Friends.class);
-              //  startActivity(status_intent);
-
-            }
-        });
     }
 
     public void doOnSuccess(String s){
