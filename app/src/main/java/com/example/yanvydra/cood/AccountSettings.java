@@ -55,11 +55,11 @@ public class AccountSettings extends AppCompatActivity {
                 mProgress.show();
 
                 String password = mPassword.getText().toString();
-                String name = mPassword.getText().toString();
+                String name = mName.getText().toString();
 
 
                 reference1.child("password").setValue(password);
-                reference1.child("password").setValue(name);
+                reference1.child("fio").setValue(name);
 
                 mProgress.dismiss();
 
