@@ -21,7 +21,8 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.squareup.picasso.Picasso;
+//import com.squareup.picasso.Picasso;
+import com.example.myimageloader.IMGldr;
 
 public class MyAccount extends AppCompatActivity {
 
@@ -72,7 +73,7 @@ public class MyAccount extends AppCompatActivity {
                 mName.setText(name);
                 mPassword.setText(password);
 
-                Picasso.with(MyAccount.this).load(avatar).into(avaImage);
+                IMGldr.INSTANCE.load(avatar).into(avaImage);
             }
 
             @Override
@@ -154,6 +155,8 @@ public class MyAccount extends AppCompatActivity {
                 //Exception error = result.getError();
             }
         }
+
+
     /*public String getRealPathFromURI(Uri contentUri) {
 
         String [] proj={MediaStore.Images.Media.DATA};

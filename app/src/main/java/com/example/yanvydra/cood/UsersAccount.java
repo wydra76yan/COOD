@@ -7,11 +7,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.myimageloader.IMGldr;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
-import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -62,7 +62,7 @@ public class UsersAccount extends AppCompatActivity {
 
                 mName.setText(name);
                 mPassword.setText(password);
-                Picasso.with(UsersAccount.this).load(avatar).into(avaImage);
+                IMGldr.INSTANCE.load(avatar).into(avaImage);
 
 
             }

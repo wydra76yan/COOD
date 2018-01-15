@@ -1,6 +1,7 @@
 package com.example.yanvydra.cood;
 
 import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,6 +16,8 @@ public class AccountSettings extends AppCompatActivity {
     private EditText mPassword;
     private EditText mName;
     private Button mSavebtn;
+
+    ChangeInfoAsyncTask changeInfoAsyncTask;
 
     Firebase reference1;
 
@@ -54,14 +57,17 @@ public class AccountSettings extends AppCompatActivity {
                 mProgress.setMessage("Please wait while we save the changes");
                 mProgress.show();
 
-                String password = mPassword.getText().toString();
+                changeInfoAsyncTask = new ChangeInfoAsyncTask();
+                changeInfoAsyncTask.execute();
+
+                /*String password = mPassword.getText().toString();
                 String name = mName.getText().toString();
 
 
                 reference1.child("password").setValue(password);
                 reference1.child("fio").setValue(name);
 
-                mProgress.dismiss();
+                mProgress.dismiss();*/
 
                 /*reference1.child("password").setValue(password).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -83,6 +89,26 @@ public class AccountSettings extends AppCompatActivity {
             }
         });
 
+
+
+    }
+
+    public class ChangeInfoAsyncTask extends AsyncTask<Void,Void,Void>{
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+
+            String password = mPassword.getText().toString();
+            String name = mName.getText().toString();
+
+
+            reference1.child("password").setValue(password);
+            reference1.child("fio").setValue(name);
+
+            mProgress.dismiss();
+
+            return null;
+        }
 
 
     }
